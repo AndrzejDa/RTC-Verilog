@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/Display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/Prescaler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Prescaler
+WARNING: [VRFC 10-2096] empty statement in sequential block [D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/Prescaler.v:12]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+WARNING: [VRFC 10-2096] empty statement in sequential block [D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/debouncer.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/rtc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/XilinxProjekty/RTC/RTC.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

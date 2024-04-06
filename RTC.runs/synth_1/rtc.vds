@@ -1,0 +1,429 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr  6 23:34:34 2024
+# Process ID: 12296
+# Current directory: E:/RTC/RTC.runs/synth_1
+# Command line: vivado.exe -log rtc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rtc.tcl
+# Log file: E:/RTC/RTC.runs/synth_1/rtc.vds
+# Journal file: E:/RTC/RTC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source rtc.tcl -notrace
+Command: synth_design -top rtc -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10624 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 361.691 ; gain = 100.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rtc' [E:/RTC/RTC.srcs/sources_1/new/rtc.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Prescaler' [E:/RTC/RTC.srcs/sources_1/new/Prescaler.v:3]
+	Parameter N bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Prescaler' (1#1) [E:/RTC/RTC.srcs/sources_1/new/Prescaler.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Prescaler__parameterized0' [E:/RTC/RTC.srcs/sources_1/new/Prescaler.v:3]
+	Parameter N bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Prescaler__parameterized0' (1#1) [E:/RTC/RTC.srcs/sources_1/new/Prescaler.v:3]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [E:/RTC/RTC.srcs/sources_1/new/debouncer.v:3]
+	Parameter N bound to: 5000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/RTC/RTC.srcs/sources_1/new/debouncer.v:24]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [E:/RTC/RTC.srcs/sources_1/new/debouncer.v:22]
+WARNING: [Synth 8-5788] Register sw_o_reg in module debouncer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/RTC/RTC.srcs/sources_1/new/debouncer.v:26]
+WARNING: [Synth 8-5788] Register state_reg in module debouncer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/RTC/RTC.srcs/sources_1/new/debouncer.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (2#1) [E:/RTC/RTC.srcs/sources_1/new/debouncer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Display' [E:/RTC/RTC.srcs/sources_1/new/Display.v:3]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000100 is unreachable [E:/RTC/RTC.srcs/sources_1/new/Display.v:90]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/RTC/RTC.srcs/sources_1/new/Display.v:74]
+WARNING: [Synth 8-5788] Register seconds_reg in module Display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/RTC/RTC.srcs/sources_1/new/Display.v:50]
+WARNING: [Synth 8-3848] Net numbers in module/entity Display does not have driver. [E:/RTC/RTC.srcs/sources_1/new/Display.v:16]
+WARNING: [Synth 8-3848] Net dot in module/entity Display does not have driver. [E:/RTC/RTC.srcs/sources_1/new/Display.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (3#1) [E:/RTC/RTC.srcs/sources_1/new/Display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rtc' (4#1) [E:/RTC/RTC.srcs/sources_1/new/rtc.v:3]
+WARNING: [Synth 8-3331] design Display has unconnected port button_test_i
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 417.562 ; gain = 156.270
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 417.562 ; gain = 156.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 417.562 ; gain = 156.270
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/RTC/RTC.srcs/constrs_1/new/constr.xdc]
+Finished Parsing XDC File [E:/RTC/RTC.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/RTC/RTC.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rtc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rtc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 772.438 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 772.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 772.449 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 772.508 ; gain = 0.059
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sw_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/RTC/RTC.srcs/sources_1/new/Display.v:54]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/RTC/RTC.srcs/sources_1/new/Display.v:59]
+INFO: [Synth 8-802] inferred FSM for state register 'n_seg_reg' in module 'Display'
+INFO: [Synth 8-5544] ROM "led7_an_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:36 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 19    
++---Registers : 
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 23    
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     18 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Prescaler 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Prescaler__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+Module Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 14    
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 15    
+	   2 Input     18 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "db_hr/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "db_hr/state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "db_min/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "db_min/state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "db_test/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "db_test/state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design Display has unconnected port button_test_i
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[31]' (FDE) to 'db_hr/state_reg[30]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[30]' (FDE) to 'db_hr/state_reg[29]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[29]' (FDE) to 'db_hr/state_reg[28]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[28]' (FDE) to 'db_hr/state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[27]' (FDE) to 'db_hr/state_reg[26]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[26]' (FDE) to 'db_hr/state_reg[25]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[25]' (FDE) to 'db_hr/state_reg[24]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[24]' (FDE) to 'db_hr/state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[23]' (FDE) to 'db_hr/state_reg[22]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[22]' (FDE) to 'db_hr/state_reg[21]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[21]' (FDE) to 'db_hr/state_reg[20]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[20]' (FDE) to 'db_hr/state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[19]' (FDE) to 'db_hr/state_reg[18]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[18]' (FDE) to 'db_hr/state_reg[17]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[17]' (FDE) to 'db_hr/state_reg[16]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[16]' (FDE) to 'db_hr/state_reg[15]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[15]' (FDE) to 'db_hr/state_reg[14]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[14]' (FDE) to 'db_hr/state_reg[13]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[13]' (FDE) to 'db_hr/state_reg[12]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[12]' (FDE) to 'db_hr/state_reg[11]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[11]' (FDE) to 'db_hr/state_reg[10]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[10]' (FDE) to 'db_hr/state_reg[9]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[9]' (FDE) to 'db_hr/state_reg[8]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[8]' (FDE) to 'db_hr/state_reg[7]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[7]' (FDE) to 'db_hr/state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[6]' (FDE) to 'db_hr/state_reg[5]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[5]' (FDE) to 'db_hr/state_reg[4]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[4]' (FDE) to 'db_hr/state_reg[3]'
+INFO: [Synth 8-3886] merging instance 'db_hr/state_reg[3]' (FDE) to 'db_hr/state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[31]' (FDE) to 'db_min/state_reg[30]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[30]' (FDE) to 'db_min/state_reg[29]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[29]' (FDE) to 'db_min/state_reg[28]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[28]' (FDE) to 'db_min/state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[27]' (FDE) to 'db_min/state_reg[26]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[26]' (FDE) to 'db_min/state_reg[25]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[25]' (FDE) to 'db_min/state_reg[24]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[24]' (FDE) to 'db_min/state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[23]' (FDE) to 'db_min/state_reg[22]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[22]' (FDE) to 'db_min/state_reg[21]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[21]' (FDE) to 'db_min/state_reg[20]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[20]' (FDE) to 'db_min/state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[19]' (FDE) to 'db_min/state_reg[18]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[18]' (FDE) to 'db_min/state_reg[17]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[17]' (FDE) to 'db_min/state_reg[16]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[16]' (FDE) to 'db_min/state_reg[15]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[15]' (FDE) to 'db_min/state_reg[14]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[14]' (FDE) to 'db_min/state_reg[13]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[13]' (FDE) to 'db_min/state_reg[12]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[12]' (FDE) to 'db_min/state_reg[11]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[11]' (FDE) to 'db_min/state_reg[10]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[10]' (FDE) to 'db_min/state_reg[9]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[9]' (FDE) to 'db_min/state_reg[8]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[8]' (FDE) to 'db_min/state_reg[7]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[7]' (FDE) to 'db_min/state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[6]' (FDE) to 'db_min/state_reg[5]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[5]' (FDE) to 'db_min/state_reg[4]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[4]' (FDE) to 'db_min/state_reg[3]'
+INFO: [Synth 8-3886] merging instance 'db_min/state_reg[3]' (FDE) to 'db_min/state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'seg7/led7_an_o_reg[0]' (FDE) to 'seg7/led7_an_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seg7/led7_an_o_reg[2]' (FDE) to 'seg7/led7_seg_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'seg7/led7_an_o_reg[4]' (FDE) to 'seg7/led7_an_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seg7/led7_an_o_reg[5]' (FDE) to 'seg7/led7_an_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seg7/led7_an_o_reg[6]' (FDE) to 'seg7/led7_an_o_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (seg7/\led7_an_o_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (seg7/\led7_seg_o_reg[1] )
+INFO: [Synth 8-3886] merging instance 'seg7/n_seg_reg[1]' (FDE) to 'seg7/led7_an_o_reg[1]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:43 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:53 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:53 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:53 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    11|
+|3     |LUT2   |    37|
+|4     |LUT3   |     4|
+|5     |LUT4   |     6|
+|6     |FDCE   |    33|
+|7     |FDRE   |     4|
+|8     |IBUF   |     3|
+|9     |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+--------------------------+------+
+|      |Instance   |Module                    |Cells |
++------+-----------+--------------------------+------+
+|1     |top        |                          |   115|
+|2     |  pres_1ms |Prescaler__parameterized0 |    88|
+|3     |  seg7     |Display                   |     7|
++------+-----------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 772.508 ; gain = 511.215
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 772.508 ; gain = 156.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:55 . Memory (MB): peak = 772.508 ; gain = 511.215
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 782.949 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:59 . Memory (MB): peak = 782.949 ; gain = 529.438
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 782.949 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/RTC/RTC.runs/synth_1/rtc.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rtc_utilization_synth.rpt -pb rtc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 23:35:40 2024...

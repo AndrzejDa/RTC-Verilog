@@ -1,0 +1,11 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/XilinxProjekty/RTC/RTC.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/XilinxProjekty/RTC/RTC.srcs/sim_1/new/tb.v,1710981053,verilog,,,,tb,,,,,,,,
+D:/XilinxProjekty/RTC/RTC.srcs/sim_1/new/testbench.v,1711051470,verilog,,,,testbench,,,,,,,,
+D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/Display.v,1711051384,verilog,,D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/Prescaler.v,,Display,,,,,,,,
+D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/Prescaler.v,1711032913,verilog,,D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/debouncer.v,,Prescaler,,,,,,,,
+D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/debouncer.v,1711031215,verilog,,D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/rtc.v,,debouncer,,,,,,,,
+D:/XilinxProjekty/RTC/RTC.srcs/sources_1/new/rtc.v,1711034492,verilog,,D:/XilinxProjekty/RTC/RTC.srcs/sim_1/new/testbench.v,,rtc,,,,,,,,
