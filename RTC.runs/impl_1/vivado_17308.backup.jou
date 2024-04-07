@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Apr  6 23:35:49 2024
-# Process ID: 3168
-# Current directory: E:/RTC/RTC.runs/impl_1
+# Start of session at: Sun Apr  7 15:45:03 2024
+# Process ID: 17308
+# Current directory: D:/XilinxProjekty/RTC/RTC.runs/impl_1
 # Command line: vivado.exe -log rtc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source rtc.tcl -notrace
-# Log file: E:/RTC/RTC.runs/impl_1/rtc.vdi
-# Journal file: E:/RTC/RTC.runs/impl_1\vivado.jou
+# Log file: D:/XilinxProjekty/RTC/RTC.runs/impl_1/rtc.vdi
+# Journal file: D:/XilinxProjekty/RTC/RTC.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source rtc.tcl -notrace

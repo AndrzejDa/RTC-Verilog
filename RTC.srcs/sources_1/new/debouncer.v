@@ -2,7 +2,6 @@
 
 module debouncer(
     input sw_i,
-    input rst_i,
     input clk_i,
     output reg sw_o
     );
@@ -16,33 +15,28 @@ module debouncer(
         sw_o <= 1'b0;
     end
     
-    always @(posedge clk_i or posedge rst_i) begin
-        if (rst_i) begin
-            counter <= 0;
-            temp <= 0;
-        end else begin
-            case(state)
-                0: begin
-                    sw_o <= 1'b0;
-                    if(sw_i == 1) begin
-                        state <= 1;
-                    end
+    always @(posedge clk_i) begin
+        case(state)
+            0: begin
+                sw_o <= 1'b0;
+                if(sw_i == 1) begin
+                    state <= 1;
                 end
-                1: begin
-                    if (counter == N) begin
-                        state <= 2;
-                        counter <= 0;
-                    end else begin
-                        counter <= counter + 1;    
-                    end;
+            end
+            1: begin
+                if (counter == N) begin
+                    state <= 2;
+                    counter <= 0;
+                end else begin
+                    counter <= counter + 1;    
+                end;
+            end
+            2: begin
+                sw_o <= 1'b1;
+                if(sw_i == 0) begin
+                    state <= 0;
                 end
-                2: begin
-                    sw_o <= 1'b1;
-                    if(sw_i == 0) begin
-                        state <= 0;
-                    end
-                end            
-            endcase
-        end
+            end            
+        endcase
     end
 endmodule
