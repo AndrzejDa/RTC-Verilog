@@ -66,7 +66,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint rtc_routed.dcp
-  set_property webtalk.parent_dir D:/XilinxProjekty/RTC/RTC.cache/wt [current_project]
+  set_property webtalk.parent_dir E:/RTCv2/RTC/RTC.cache/wt [current_project]
   catch { write_mem_info -force rtc.mmi }
   write_bitstream -force rtc.bit 
   catch {write_debug_probes -quiet -force rtc}

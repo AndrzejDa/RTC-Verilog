@@ -10,11 +10,10 @@ module Clock(
     
     always @(posedge clk_i or posedge rst_i or posedge button_hr_i or posedge button_min_i) begin
         if(rst_i) begin
-            seconds = 0;
         end else if (clk_i)begin
             if(seconds < 86400)
                 seconds = seconds + 1;
-            else seconds = 0;           
+            else seconds = 1;           
         end else if (button_hr_i) 
             if (seconds < 82800)
               seconds = seconds + 3600;
@@ -27,4 +26,3 @@ module Clock(
               seconds = seconds - 86340;
     end
 endmodule
-

@@ -15,7 +15,7 @@ module rtc(clk_i, rst_i, button_hr_i, button_min_i, button_test_i, led7_seg_o, l
     wire b_test_deb;
     wire pclk;
     wire clk_1ms;
-    wire [18:0] seconds;
+    //wire [18:0] seconds;
     wire [3:0] hours_tens;
     wire [3:0] hours_ones;
     wire [3:0] minutes_tens;
@@ -23,20 +23,18 @@ module rtc(clk_i, rst_i, button_hr_i, button_min_i, button_test_i, led7_seg_o, l
     
     wire [27:0] display4digits;
     
-    debouncer db_hr(button_hr_i, clk_i, b_hr_deb);
-    debouncer db_min(button_min_i, clk_i, b_min_deb);
-    debouncer db_test(button_test_i, clk_i, b_test_deb);
+    debouncer db_hr(button_hr_i, rst_i, clk_i, b_hr_deb);
+    debouncer db_min(button_min_i, rst_i, clk_i, b_min_deb);
+    debouncer db_test(button_test_i, rst_i, clk_i, b_test_deb);
     
-    Prescaler pres(button_test_i, clk_i, pclk);
-    Prescaler #(100000) pres_1ms (button_test_i, clk_i, clk_1ms); 
-    Clock clock (pclk, rst_i, b_hr_deb, b_min_deb, seconds);
-    
-    DigitDecoder decoder(seconds, hours_tens, hours_ones, minutes_tens, minutes_ones);
+    Prescaler pres(button_test_i, clk_i, rst_i, b_hr_deb, b_min_deb, pclk);
+    DisplaySync dync(clk_i, clk_1ms);     
+    DigitDecoder decoder(pclk, hours_tens, hours_ones, minutes_tens, minutes_ones);
     Digit d1(hours_tens, display4digits[27:21]);
     Digit d2(hours_ones, display4digits[20:14]);
     Digit d3(minutes_tens, display4digits[13:7]);
     Digit d4(minutes_ones, display4digits[6:0]);
-    Display seg7(clk_1ms, display4digits[27:21], display4digits[20:14], display4digits[13:7], display4digits[6:0], led7_seg_o, led7_an_o);
+    Display seg7(pclk, clk_1ms, rst_i, display4digits[27:21], display4digits[20:14], display4digits[13:7], display4digits[6:0], led7_seg_o, led7_an_o);
     
     
 endmodule

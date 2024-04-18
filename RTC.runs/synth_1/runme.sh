@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/XilinxProjekty/RTC/RTC.runs/synth_1'
+HD_PWD='E:/RTCv2/RTC/RTC.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

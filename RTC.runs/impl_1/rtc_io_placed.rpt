@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Sun Apr  7 15:45:27 2024
+| Date                      : Thu Apr 18 22:38:36 2024
 | Host                      : DESKTOP-NM8ULCN running 64-bit major release  (build 9200)
 | Command                   : report_io -file rtc_io_placed.rpt
 | Design                    : rtc
@@ -314,7 +314,7 @@ Table of Contents
 | T7         |               |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | T8         |               | High Range | IO_L24N_T3_34                | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T9         | led7_an_o[2]  | High Range | IO_L24P_T3_A01_D17_14        | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| T10        | led7_seg_o[7] | High Range | IO_L24N_T3_A00_D16_14        | TRISTATE    | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| T10        | led7_seg_o[7] | High Range | IO_L24N_T3_A00_D16_14        | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T11        | led7_seg_o[2] | High Range | IO_L19P_T3_A10_D26_14        | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T12        |               | High Range | VCCO_14                      | VCCO        |             |      14 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | T13        |               | High Range | IO_L23P_T3_A03_D19_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
